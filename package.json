@@ -1,0 +1,23 @@
+{
+  "name": "arc-lite-mcp",
+  "version": "1.0.0",
+  "description": "Lightweight MCP server for Arc Browser - optimized for Next.js development",
+  "type": "module",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js"
+  },
+  "keywords": [
+    "mcp",
+    "arc",
+    "browser",
+    "applescript",
+    "automation",
+    "nextjs",
+    "frontend"
+  ],
+  "license": "MIT",
+  "dependencies": {
+    "@modelcontextprotocol/sdk": "^0.6.0"
+  }
+}
