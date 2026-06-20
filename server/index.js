@@ -3,9 +3,9 @@
 /**
  * Arc-Lite MCP Server
  *
- * Next.js開発に最適化されたArc Browser制御用軽量MCPサーバー
+ * フロントエンド開発に最適化されたArc Browser制御用軽量MCPサーバー
  *
- * 機能（27ツール）:
+ * 機能（30ツール）:
  * - タブ操作（5）: open_url, list_tabs, switch_tab, close_tab, reload_tab
  * - ナビゲーション（1）: go_back
  * - DOM操作（8）: click, hover, fill, fill_form, press_key, drag, upload_file, wait_for
@@ -95,9 +95,14 @@ class ArcLiteServer {
    * @returns {string} - エスケープされた文字列
    */
   escapeForAppleScript(str) {
+    if (typeof str !== 'string') return String(str);
     return str
       .replace(/\\/g, '\\\\')
-      .replace(/"/g, '\\"');
+      .replace(/"/g, '\\"')
+      .replace(/'/g, "\\'")
+      .replace(/\n/g, '\\n')
+      .replace(/\r/g, '\\r')
+      .replace(/\t/g, '\\t');
   }
 
   setupHandlers() {
