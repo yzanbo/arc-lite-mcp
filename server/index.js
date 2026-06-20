@@ -99,7 +99,6 @@ class ArcLiteServer {
     return str
       .replace(/\\/g, '\\\\')
       .replace(/"/g, '\\"')
-      .replace(/'/g, "\\'")
       .replace(/\n/g, '\\n')
       .replace(/\r/g, '\\r')
       .replace(/\t/g, '\\t');
@@ -1177,7 +1176,7 @@ class ArcLiteServer {
                 }
               }
               window.__arcNetworkRequests = [];
-              window.__arcNetworkFilter = '${escapedFilter}';
+              window.__arcNetworkFilter = "${escapedFilter}";
               window.__arcNetworkRequestId = 0;
 
               // Fetch のオーバーライド
@@ -1503,8 +1502,8 @@ class ArcLiteServer {
                 allLogs = [...window.__arcPreservedLogs, ...window.__arcConsoleLogs];
               }
               let logs = allLogs;
-              if ('${level}' !== 'all') {
-                logs = logs.filter(log => log.level === '${level}');
+              if ("${level}" !== 'all') {
+                logs = logs.filter(log => log.level === "${level}");
               }
               logs = logs.slice(-${limit});
 
@@ -1517,7 +1516,7 @@ class ArcLiteServer {
               };
 
               return JSON.stringify({
-                filter: '${level}',
+                filter: "${level}",
                 count: logs.length,
                 total: allLogs.length,
                 currentCount: window.__arcConsoleLogs.length,
@@ -1750,7 +1749,7 @@ class ArcLiteServer {
                   return JSON.stringify({ error: "要素が見つかりません: ${escapedSelector}" });
                 }
                 el.scrollIntoView({ behavior: 'smooth', block: 'center' });
-                const event = new MouseEvent('${clickType}', {
+                const event = new MouseEvent("${clickType}", {
                   bubbles: true,
                   cancelable: true,
                   view: window
