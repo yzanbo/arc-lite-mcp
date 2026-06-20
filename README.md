@@ -1,13 +1,13 @@
 # Arc-Lite MCP Server
 
-Next.js / フロントエンド開発に最適化された Arc Browser 制御用の軽量 MCP サーバーです。
+フロントエンド開発に最適化された Arc Browser 制御用の軽量 MCP サーバーです。
 AppleScript と JavaScript インジェクションを組み合わせ、必要十分な 30 ツールに絞ったコンパクトな構成を提供します。
 
 > **対応環境**: macOS 専用（AppleScript を使用）
 
 ## 特徴
 
-- **軽量**: フル版（58ツール）から Next.js / フロントエンド開発に必須の機能のみを厳選した 30 ツール構成
+- **軽量**: フル版（58ツール）からフロントエンド開発に必須の機能のみを厳選した 30 ツール構成
 - **依存最小**: `@modelcontextprotocol/sdk` のみ
 - **DOM操作対応**: クリック、入力、フォーム送信、ドラッグなどの実操作をサポート
 - **デバッグ機能**: コンソール / ネットワーク監視、スクリーンショット取得
@@ -89,7 +89,7 @@ AppleScript と JavaScript インジェクションを組み合わせ、必要�
 ### 1. クローンと依存関係のインストール
 
 ```bash
-git clone https://github.com/shenbaoblog/arc-lite-mcp.git
+git clone https://github.com/yzanbo/arc-lite-mcp.git
 cd arc-lite-mcp
 npm install
 ```
@@ -141,7 +141,7 @@ arc_click で "button[type=submit]" をクリックして
 arc_wait_for で ".dashboard" の表示を待って
 ```
 
-### コンソール・ネットワーク監視（Next.js デバッグ）
+### コンソール・ネットワーク監視（フロントエンドデバッグ）
 
 ```text
 arc_start_console_capture でコンソール監視を開始して
